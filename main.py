@@ -22,10 +22,10 @@ logger.add(
 def print_header():
     cn = pyfiglet.figlet_format("xNodepayBot")
     print(cn)
-    print("ðŸŒ± Season 2")
-    print("ðŸŽ¨ by \033]8;;https://github.com/officialputuid\033\\officialputuid\033]8;;\033\\")
-    print("âœ¨ Credits: IDWR2016, im-hanzou, AirdropFamilyIDN")
-    print('ðŸŽ \033]8;;https://paypal.me/IPJAP\033\\Paypal.me/IPJAP\033]8;;\033\\ â€” \033]8;;https://trakteer.id/officialputuid\033\\Trakteer.id/officialputuid\033]8;;\033\\')
+    print("🌱 Season 2")
+    print("🎨 by \033]8;;https://github.com/officialputuid\033\\officialputuid\033]8;;\033\\")
+    print("✨ Credits: IDWR2016, im-hanzou, AirdropFamilyIDN")
+    print('🎁 \033]8;;https://paypal.me/IPJAP\033\\Paypal.me/IPJAP\033]8;;\033\\ — \033]8;;https://trakteer.id/officialputuid\033\\Trakteer.id/officialputuid\033]8;;\033\\')
 
 # Initialize the header
 print_header()
@@ -43,9 +43,9 @@ def read_tokens_and_proxy():
 tokens_content, proxy_count = read_tokens_and_proxy()
 
 print()
-print(f"ðŸ”‘ Tokens: {tokens_content}.")
-print(f"ðŸŒ Loaded {proxy_count} proxies.")
-print(f"ðŸ§© Nodepay limits only 3 connections per account.")
+print(f"🔑 Tokens: {tokens_content}.")
+print(f"🌐 Loaded {proxy_count} proxies.")
+print(f"🧩 Nodepay limits only 3 connections per account.")
 print()
 
 # Constants
@@ -206,10 +206,10 @@ def remove_proxy(proxy):
 def ask_user_for_proxy():
     user_input = ""
     while user_input not in ['yes', 'no']:
-        user_input = input("ðŸ”µ Do you want to use proxy? (yes/no)? ").strip().lower()
+        user_input = input("🔵 Do you want to use proxy? (yes/no)? ").strip().lower()
         if user_input not in ['yes', 'no']:
-            print("ðŸ”´ Invalid input. Please enter 'yes' or 'no'.")
-    print(f"ðŸ”µ You selected: {'Yes' if user_input == 'yes' else 'No'}, ENJOY!\n")
+            print("🔴 Invalid input. Please enter 'yes' or 'no'.")
+    print(f"🔵 You selected: {'Yes' if user_input == 'yes' else 'No'}, ENJOY!\n")
     return user_input == 'yes'
 
 async def main():
