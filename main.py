@@ -118,12 +118,26 @@ async def initialize_profile(proxy, token):
 
 async def send_request(url, payload, proxy, token):
     headers = {
+        ":authority": "api.nodepay.org",  # Perhatikan ini, disarankan menggunakan domain yang sesuai
+        ":method": "POST",  # Ini adalah HTTP Method
+        ":path": "/api/auth/session?",  # Pastikan path yang digunakan benar
+        ":scheme": "https",
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "en-US,en;q=0.9,id;q=0.8",
         "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json",
-        "User-Agent": UserAgent().random,
-        "Accept": "application/json",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Referer": "https://app.nodepay.ai",
+        "content-length": "2",  # Jika diperlukan, perhatikan nilai konten ini
+        "content-type": "application/json",
+        "origin": "https://app.nodepay.ai",
+        "priority": "u=1, i",
+        "referer": "https://app.nodepay.ai/",
+        "sec-ch-ua": '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"Windows"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site",
+        "user-agent": UserAgent().random,
     }
 
     async with aiohttp.ClientSession() as session:
